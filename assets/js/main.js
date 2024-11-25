@@ -11,8 +11,8 @@ let isWork = false;
 let isImg = false;
 window.onscroll = function () {
 
-    const nav = document.querySelector(".header");
-    const about = document.querySelector(".about");
+   // const nav = document.querySelector(".header");
+   // const about = document.querySelector(".about");
     const hi = document.querySelector(".about .ab");
     const tt = document.querySelector(".about .about-txt");
     const ctr = document.querySelector(".about .count-s");

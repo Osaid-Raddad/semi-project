@@ -257,6 +257,30 @@ a:hover{
     color: var(--maincolor);
 }
 
+/* Header media */
+
+
+
+ @media (max-width: 714px) { 
+
+    .header .intro-1{
+        font-size: 25px !important;
+    }
+
+ }
+
+@media (max-width: 959px) {
+
+    .header .welcome,.intro-1{
+        font-size: 15px;
+    }
+    .header .intro-1{
+        font-size: 55px;
+    }
+ }
+
+
+
 /* about section*/
 .about {
     background-color: var(--maincolor);
@@ -300,6 +324,8 @@ a:hover{
     font-size: 18px;
     color: #000;
 }
+
+
 
 /* section 3 our business*/
 
@@ -355,6 +381,7 @@ a:hover{
 }
 
 /* section 4*/
+
 .section-4 {
     height: 2327.16px;
 }
@@ -363,7 +390,6 @@ a:hover{
     background-color: #000;
     height: 636.16px;
 }
-
 
 .section-4 .span-sec4 {
     color: var(--maincolor);
@@ -388,59 +414,225 @@ a:hover{
 .section-4 .work-container {
     width: 1120px;
     height: 1820px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.section-4 .work-container .work-left {
-    width: 50%;
-    height: 100%;
-}
-
+.section-4 .work-container .work-left,
 .section-4 .work-container .work-right {
     width: 50%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-4 .work-container .work-left .work-item,
+.section-4 .work-container .work-right .work-item {
+    position: relative;
+    width: 100%;
+    height: 560px;  
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.section-4 .work-container .work-left .work-item1,
+.section-4 .work-container .work-right .work-item1 {
+    position: relative;
+    width: 100%;
+    height: 700px;  
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
 }
 
 .section-4 .work-container .work-left .img-left-1 {
-    height: 560px;
     background-image: url('./../img/work/photographer.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .section-4 .work-container .work-left .img-left-2 {
-    height: 560px;
     background-image: url('./../img/work/car.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .section-4 .work-container .work-left .img-left-3 {
-    height: 700px;
     background-image: url('./../img/work/guitar.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .section-4 .work-container .work-right .img-right-1 {
-    height: 700px;
     background-image: url('./../img/work/woodcraft.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .section-4 .work-container .work-right .img-right-2 {
-    height: 560px;
     background-image: url('./../img/work/grow-green.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .section-4 .work-container .work-right .img-right-3 {
-    height: 560px;
     background-image: url('./../img/work/palmeira.jpg');
-    background-size: cover;
-    background-position: center;
 }
+
+.section-4 .work-container .work-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 560px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.section-4 .work-container .work-item1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 700px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.section-4 .work-container .work-item:hover .overlay {
+    opacity: 1;
+}
+.section-4 .work-container .work-item1:hover .overlay {
+    opacity: 1;
+}
+
+.section-4 .work-container .work-item .link-icon {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    background-color: #000000;
+    border-radius: 50%; 
+    padding: 10px; 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+.section-4 .work-container .work-item1 .link-icon {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    background-color: #000000; 
+    border-radius: 50%; 
+    padding: 10px; 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+
+.section-4 .work-container .work-item:hover .link-icon {
+    opacity: 1;
+    transform: translateY(-30px); /* Move from above */
+}
+.section-4 .work-container .work-item1:hover .link-icon {
+    opacity: 1;
+    transform: translateY(-30px);
+}
+
+
+
+.section-4 .work-container .work-item .overlay h3,
+.section-4 .work-container .work-item .overlay p {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.section-4 .work-container .work-item1 .overlay h3,
+.section-4 .work-container .work-item1 .overlay p {
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+/* Show h3 and p on hover (animate upwards) */
+.section-4 .work-container .work-item:hover .overlay h3,
+.section-4 .work-container .work-item:hover .overlay p {
+    opacity: 1;
+    transform: translateY(0); 
+}
+.section-4 .work-container .work-item1:hover .overlay h3,
+.section-4 .work-container .work-item1:hover .overlay p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Make sure h3 and p inside the overlay align nicely */
+.section-4 .work-container .work-item .overlay h3,
+.section-4 .work-container .work-item .overlay p {
+    color: white;
+    text-align: center;
+    margin: 10px 0; 
+}
+.section-4 .work-container .work-item1 .overlay h3,
+.section-4 .work-container .work-item1 .overlay p {
+    color: white;
+    text-align: center;
+    margin: 10px 0; 
+}
+
+
+.section-4 .work-container .work-item .bottom-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.section-4 .work-container .work-item1 .bottom-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section-4 .work-container .work-item:hover .bottom-info {
+    opacity: 1;
+    transform: translateY(20px);
+}
+.section-4 .work-container .work-item1:hover .bottom-info {
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+.section-4 .work-container .work-item .center-icon {
+    font-size: 48px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.section-4 .work-container .work-item1 .center-icon {
+    font-size: 48px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.section-4 .work-container .work-item:hover .center-icon {
+    opacity: 1;
+    transform: translateY(10px); /* Adjust for smooth motion */
+}
+.section-4 .work-container .work-item1:hover .center-icon {
+    opacity: 1;
+    transform: translateY(10px); /* Adjust for smooth motion */
+}
+
+
+
 
 
 
@@ -701,10 +893,6 @@ a:hover{
     border: 0 !important;
 }
 
-.modal.fade:not(.in).left .modal-dialog {
-    -webkit-transform: translate3d(-25%, 0, 0);
-    transform: translate3d(-25%, 0, 0);
-}
 
 .modal.fade:not(.in).right .modal-dialog {
     -webkit-transform: translate3d(25%, 0, 0);
@@ -723,7 +911,6 @@ a:hover{
     margin: 0;
 }
 
-.modal.left .modal-content,
 .modal.right .modal-content {
     min-height: 100vh;
     border: 0;
@@ -767,3 +954,4 @@ a:hover{
 .modal-list2 .ho:hover{
     color: white;
 }
+
