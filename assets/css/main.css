@@ -293,7 +293,6 @@ a:hover{
 
 .about .ab {
     gap: 35px;
-    ;
 }
 
 .about .hello {
@@ -317,7 +316,7 @@ a:hover{
 }
 
 .about .count-s {
-    gap: 100px;
+    gap: 85px;
 }
 
 .about .label {
